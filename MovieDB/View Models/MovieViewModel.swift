@@ -9,7 +9,7 @@
 import Foundation
 
 struct MovieListViewModel {
-    let movies: [Movie]
+    let results: [Movie]
 }
 
 extension MovieListViewModel {
@@ -18,11 +18,11 @@ extension MovieListViewModel {
     }
     
     func numberOfRowsInSection (_ section: Int) -> Int {
-        return self.movies.count
+        return self.results.count
     }
     
     func movieAtIndex(_ index: Int) -> MovieViewModel {
-        let movie = self.movies[index]
+        let movie = self.results[index]
         return MovieViewModel(movie)
     }
 }
@@ -40,14 +40,14 @@ struct MovieViewModel {
     }
     
     var voteAverage: Double {
-        return self.movie.voteAverage
+        return self.movie.vote_average
     }
     
     var posterImage: String {
-        return self.movie.posterImage
+        return self.movie.poster_path
     }
     
-    var releaseDate: Date {
-        return self.movie.releaseDate
+    var releaseDate: String {
+        return self.movie.release_date
     }
 }

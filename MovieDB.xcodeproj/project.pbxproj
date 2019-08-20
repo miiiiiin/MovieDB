@@ -14,6 +14,7 @@
 		817B2612230BF41E003DF85D /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817B2611230BF41E003DF85D /* MovieViewModel.swift */; };
 		817B2615230BF4AD003DF85D /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817B2614230BF4AD003DF85D /* Movie.swift */; };
 		817B2617230BFCC7003DF85D /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817B2616230BFCC6003DF85D /* MovieCell.swift */; };
+		817B2619230C90A6003DF85D /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817B2618230C90A6003DF85D /* WebService.swift */; };
 		A544E5DBED0138676D800723 /* Pods_MovieDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B939DB4B54F985DA28370A22 /* Pods_MovieDB.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +29,7 @@
 		817B2611230BF41E003DF85D /* MovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewModel.swift; sourceTree = "<group>"; };
 		817B2614230BF4AD003DF85D /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		817B2616230BFCC6003DF85D /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
+		817B2618230C90A6003DF85D /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		A6BCE3A2CF489E4014AB8D93 /* Pods-MovieDB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieDB.debug.xcconfig"; path = "Target Support Files/Pods-MovieDB/Pods-MovieDB.debug.xcconfig"; sourceTree = "<group>"; };
 		B939DB4B54F985DA28370A22 /* Pods_MovieDB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieDB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -114,6 +116,7 @@
 		817B2605230BE6DB003DF85D /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				817B2618230C90A6003DF85D /* WebService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				817B2619230C90A6003DF85D /* WebService.swift in Sources */,
 				817B260A230BED41003DF85D /* MovieListController.swift in Sources */,
 				817B2612230BF41E003DF85D /* MovieViewModel.swift in Sources */,
 				817B2615230BF4AD003DF85D /* Movie.swift in Sources */,

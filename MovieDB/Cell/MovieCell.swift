@@ -10,8 +10,10 @@ import Foundation
 import UIKit
 
 class MovieCell: UITableViewCell {
+    
     var titleLabel: UILabel!
     var voteAverageLabel: UILabel!
     var posterImage: UILabel!
     var releaseDate: Date!
+    
 }

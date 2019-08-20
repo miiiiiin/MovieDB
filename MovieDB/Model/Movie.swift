@@ -9,12 +9,12 @@
 import Foundation
 
 struct MovieList: Decodable {
-    let movies: [Movie]
+    let results: [Movie]
 }
 
 struct Movie: Decodable {
     let title: String
-    let voteAverage: Double
-    let posterImage: String
-    let releaseDate: Date
+    let vote_average: Double
+    let poster_path: String
+    let release_date: String
 }
