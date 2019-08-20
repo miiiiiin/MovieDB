@@ -8,7 +8,13 @@
 
 import Foundation
 
+struct MovieList: Decodable {
+    let movies: [Movie]
+}
 
 struct Movie: Decodable {
-    
+    let title: String
+    let voteAverage: Double
+    let posterImage: String
+    let releaseDate: Date
 }

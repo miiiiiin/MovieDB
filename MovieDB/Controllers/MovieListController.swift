@@ -11,6 +11,10 @@ import UIKit
 
 class MovieListController: UIViewController {
     
+    private var movieListVM: MovieListViewModel!
+    
+    var tableView = UITableView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpLayout()
@@ -21,5 +25,20 @@ class MovieListController: UIViewController {
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationItem.largeTitleDisplayMode = .always
         self.view.backgroundColor = .white
+    }
+}
+
+extension MovieListController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.movieListVM == nil ? 0 : self.movieListVM.numberOfSection
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+      
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell", for: indexPath) as? MovieCell
+        
+        return cell
+        
     }
 }
