@@ -47,7 +47,7 @@ class MovieListController: UIViewController {
     
     private func getMovies() {
         
-        let url = URL(string: URLs.API.baseURL + "3/movie/now_playing?api_key=******&language=en-US&page=1")!
+        let url = URL(string: URLs.API.baseURL + "3/movie/now_playing?api_key=54698ab662adbbf59ddeb3549ce2d68c&language=en-US&page=1")!
         
         Webservice().getMovies(url: url) { movies in
             
@@ -82,8 +82,8 @@ extension MovieListController: UITableViewDelegate, UITableViewDataSource {
         
         cell.titleLabel.text = movieVM.title
         cell.posterImageView.sd_setImage(with: URL(string: URLs.API.URL_Image + movieVM.posterImage))
-        cell.voteAverageLabel.text = String(movieVM.voteAverage)
-        cell.releaseDateLabel.text = movieVM.releaseDate
+        cell.voteAverageLabel.text = "Average Score : " + String(movieVM.voteAverage)
+        cell.releaseDateLabel.text = "Release Date : " + movieVM.releaseDate
         
         return cell
         
@@ -91,5 +91,14 @@ extension MovieListController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 250
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let movieVM = self.movieListVM.movieAtIndex(indexPath.row)
+        
+        var movieDetailVC = MovieDetailViewController()
+        movieDetailVC.movieVM = movieVM
+        self.navigationController?.pushViewController(movieDetailVC, animated: true)
     }
 }

@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = nav
         window?.makeKeyAndVisible()
         
-        UINavigationBar.appearance().barTintColor = UIColor(displayP3Red: 66/255, green: 158/255, blue: 157/255, alpha: 1.0)
+        UINavigationBar.appearance().barTintColor = UIColor(displayP3Red: 66/255, green: 158/255, blue: 157/255, alpha: 0.7)
         UINavigationBar.appearance().largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         

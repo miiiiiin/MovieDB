@@ -24,30 +24,9 @@ class MovieCell: UITableViewCell {
         return img
     }()
     
-    let titleLabel: UILabel = {
-        let label = UILabel()
-        label.font = UIFont.boldSystemFont(ofSize: 17)
-        label.textColor = .black
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
-    
-    let voteAverageLabel: UILabel = {
-        let label = UILabel()
-        label.font = UIFont.boldSystemFont(ofSize: 12)
-        label.textColor = .black
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
-    
-    let releaseDateLabel: UILabel = {
-        let label = UILabel()
-        label.font = UIFont.boldSystemFont(ofSize: 14)
-        label.textColor = .black
-        label.clipsToBounds = true
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
+    let titleLabel = UILabel.block
+    let voteAverageLabel = UILabel.header
+    let releaseDateLabel = UILabel.body
  
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -58,14 +37,14 @@ class MovieCell: UITableViewCell {
 
         titleLabel.leftAnchor.constraint(equalTo: self.contentView.leftAnchor, constant: 20).isActive = true
         
-        posterImageView.topAnchor.constraint(equalTo: self.titleLabel.bottomAnchor, constant: 10).isActive = true
+        posterImageView.topAnchor.constraint(equalTo: self.titleLabel.bottomAnchor, constant: 15).isActive = true
         
         posterImageView.leftAnchor.constraint(equalTo: self.contentView.leftAnchor, constant: 20).isActive = true
         posterImageView.widthAnchor.constraint(equalToConstant:120).isActive = true
         posterImageView.heightAnchor.constraint(equalToConstant:160).isActive = true
         
         releaseDateLabel.topAnchor.constraint(equalTo: self.posterImageView.topAnchor, constant: 20).isActive = true
-        releaseDateLabel.leftAnchor.constraint(equalTo: self.posterImageView.rightAnchor, constant: 100).isActive = true
+        releaseDateLabel.leftAnchor.constraint(equalTo: self.posterImageView.rightAnchor, constant: 50).isActive = true
         
         voteAverageLabel.topAnchor.constraint(equalTo: self.releaseDateLabel.bottomAnchor, constant: 50).isActive = true
         voteAverageLabel.leadingAnchor.constraint(equalTo: self.releaseDateLabel.leadingAnchor).isActive = true

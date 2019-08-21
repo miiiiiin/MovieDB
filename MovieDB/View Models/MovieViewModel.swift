@@ -50,4 +50,24 @@ struct MovieViewModel {
     var releaseDate: String {
         return self.movie.release_date
     }
+    
+    var voteCount: Int {
+        return self.movie.vote_count
+    }
+    
+    var overview: String {
+        return self.movie.overview
+    }
+    
+    var popularity: Double {
+        return self.movie.popularity
+    }
+    
+    var language: String {
+        return self.movie.original_language
+    }
+    
+    var id: Int {
+        return self.movie.id
+    }
 }
