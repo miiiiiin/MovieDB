@@ -16,7 +16,6 @@ class MovieDetailViewController: UIViewController {
     var upperView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        
         return view
     }()
     
@@ -62,11 +61,13 @@ class MovieDetailViewController: UIViewController {
         
         self.view.backgroundColor = .white
         self.navigationItem.title = "Movie Details"
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        self.navigationItem.largeTitleDisplayMode = .always
         
         let barHeight: CGFloat = UIApplication.shared.statusBarFrame.size.height
         let navigationBarHeight: CGFloat = self.navigationController!.navigationBar.frame.size.height
         
-        upperView = UIView(frame: CGRect(x: 0, y: barHeight+navigationBarHeight, width: self.view.frame.width, height: self.view.frame.height / 3))
+        upperView = UIView(frame: CGRect(x: 0, y: barHeight+navigationBarHeight, width: self.view.frame.width, height: 320))
         
         [upperView, posterImageView, titleLabel, releaseDate, voteCount, popularity, language, descriptionLabel, overView].forEach(self.view.addSubview)
         
@@ -76,7 +77,7 @@ class MovieDetailViewController: UIViewController {
         posterImageView.heightAnchor.constraint(equalToConstant:200).isActive = true
        
         
-        titleLabel.topAnchor.constraint(equalTo: self.upperView.topAnchor, constant: 40).isActive = true
+        titleLabel.topAnchor.constraint(equalTo: self.posterImageView.topAnchor).isActive = true
         titleLabel.leftAnchor.constraint(equalTo: self.posterImageView.rightAnchor, constant: 30).isActive = true
         titleLabel.rightAnchor.constraint(equalTo: self.upperView.rightAnchor, constant: -20).isActive = true
         
@@ -98,7 +99,6 @@ class MovieDetailViewController: UIViewController {
         overView.topAnchor.constraint(equalTo: self.upperView.bottomAnchor, constant: 50).isActive = true
         overView.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: 20).isActive = true
         overView.rightAnchor.constraint(equalTo: self.view.rightAnchor, constant: -40).isActive = true
-        
         
     }
 }

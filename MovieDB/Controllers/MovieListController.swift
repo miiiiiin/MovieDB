@@ -33,7 +33,7 @@ class MovieListController: UIViewController {
         let displayWidth: CGFloat = self.view.frame.width
         let displayHeight: CGFloat = self.view.frame.height
         
-        tableView = UITableView(frame: CGRect(x: 0, y: barHeight+navigationBarHeight, width: displayWidth, height: displayHeight - (barHeight+navigationBarHeight)))
+        tableView = UITableView(frame: CGRect(x: 0, y: barHeight, width: displayWidth, height: displayHeight - (barHeight)))
         tableView.register(MovieCell.self, forCellReuseIdentifier: "MovieCell")
         
         tableView.dataSource = self
@@ -47,7 +47,7 @@ class MovieListController: UIViewController {
     
     private func getMovies() {
         
-        let url = URL(string: URLs.API.baseURL + "3/movie/now_playing?api_key=54698ab662adbbf59ddeb3549ce2d68c&language=en-US&page=1")!
+        let url = URL(string: URLs.API.baseURL + "3/movie/now_playing?api_key=***************&language=en-US&page=1")!
         
         Webservice().getMovies(url: url) { movies in
             
